@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SIS - Custom",
+  "version": "1.0",
+  "description": "Custom scripts to make SIS usable",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.hana.ondemand.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.hana.ondemand.com/shell/design/contentpackage/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "images/48.png",
+      "64": "images/64.png",
+      "128": "images/128.png"
+    }
+  }
+}
