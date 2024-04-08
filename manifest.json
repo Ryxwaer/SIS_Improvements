@@ -5,7 +5,8 @@
   "description": "Custom scripts to make SIS usable",
   "permissions": [
     "activeTab",
-    "scripting"
+    "scripting",
+    "tabs"
   ],
   "host_permissions": [
     "https://*.hana.ondemand.com/*"
