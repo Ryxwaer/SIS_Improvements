@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extension Popup</title>
+    <title>Hide Elements Configuration</title>
     <style>
         body {
-            width: 200px;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            background-color: #4285f4;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #357ae8;
+            width: 300px; /* Adjust width as needed for readability */
         }
     </style>
 </head>
 <body>
-    <h3>SIS - Custom</h3>
-    <p>Click the button to force action of this extesion.</p>
-    <button id="removeButton">Just do it!</button>
+    <h3>Hide Elements</h3>
+    <div>
+        <input type="checkbox" id="sapTntToolPageAside">
+        <label for="sapTntToolPageAside">sapTntToolPageAside</label>
+    </div>
+    <div>
+        <input type="checkbox" id="sapTntToolPageHeaderWrapper">
+        <label for="sapTntToolPageHeaderWrapper">sapTntToolPageHeaderWrapper</label>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>

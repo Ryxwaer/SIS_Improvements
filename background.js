@@ -1,10 +1,11 @@
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  // Check for a completed navigation in a tab that matches your target URL
-  if (changeInfo.status === 'complete' && tab.url && tab.url.match(/https:\/\/.*\.hana\.ondemand.com\/shell\/design\/contentpackage\/.*/)) {
-    // Inject the content script into the tab
-    chrome.scripting.executeScript({
-      target: { tabId: tabId },
-      files: ['content.js']
-    });
+chrome.runtime.onInstalled.addListener((details) => {
+  const defaultConfig = ["sapTntToolPageAside", "sapTntToolPageHeaderWrapper"];
+
+  // Check if the extension was just installed or updated
+  if (details.reason === "install" || details.reason === "update") {
+      // Save the default configuration to storage
+      chrome.storage.local.set({elementsToHide: defaultConfig}, () => {
+          console.log("Default configuration saved.");
+      });
   }
 });
