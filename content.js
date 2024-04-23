@@ -1,4 +1,10 @@
 (function() {
+    let timeout;
+    if (window.hasInjected) {
+        return;
+    }
+    window.hasInjected = true;
+
     function hideOrShowElements(action) {
         chrome.storage.local.get(['elementsToHide'], function(result) {
             const elementsToHide = result.elementsToHide || [];
@@ -11,11 +17,10 @@
     }
 
     const observer = new MutationObserver(() => {
-        hideOrShowElements('hide');
+        clearTimeout(timeout);
+        timeout = setTimeout(() => hideOrShowElements('hide'), 100);
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
-
-    // Initially try to hide elements
     hideOrShowElements('hide');
 })();
