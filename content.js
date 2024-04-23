@@ -1,6 +1,6 @@
 (function() {
     let timeout;
-    if (window.hasInjected) {
+    if (window && window.hasInjected) {
         return;
     }
     window.hasInjected = true;
