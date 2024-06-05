@@ -3,9 +3,12 @@ chrome.runtime.onInstalled.addListener((details) => {
 
   // Check if the extension was just installed or updated
   if (details.reason === "install" || details.reason === "update") {
-      // Save the default configuration to storage
-      chrome.storage.local.set({elementsToHide: defaultConfig}, () => {
-          console.log("Default configuration saved.");
-      });
+    // Save the default configuration to storage
+    chrome.storage.local.set({ elementsToHide: defaultConfig }, () => {
+      console.log("Default configuration saved.");
+    });
+    chrome.storage.local.set({ themeChange: true }, () => {
+      console.log("Default themeChange saved.");
+    });
   }
 });
