@@ -7,7 +7,9 @@
     "activeTab",
     "scripting",
     "tabs",
-    "storage"
+    "storage",
+    "webRequest",
+    "webRequestAuthProvider"
   ],
   "host_permissions": [
     "https://*.hana.ondemand.com/*"

@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "*integrationflows*",
+        "initiatorDomains": [
+          "hana.ondemand.com"
+        ],
+        "resourceTypes": [
+          "main_frame",
+          "sub_frame",
+          "xmlhttprequest",
+          "other"
+        ]
+      }
+    }
+  ]
+  

@@ -1,50 +1,52 @@
-<!-- popup.html -->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hide Elements Configuration</title>
-    <style>
-        body {
-            width: 300px; /* Adjust width as needed for readability */
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        #removeButton {
-            flex-grow: 1;
-        }
-        #toggleButton {
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-        #toggleButton img {
-            width: 32px; /* Adjust size as needed */
-            height: 32px;
-        }
-    </style>
+  <title>Hide Elements Configuration</title>
+  <style>
+      body {
+          width: 300px; /* popup width */
+      }
+      .button-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      #removeButton {
+          flex-grow: 1;
+      }
+      #toggleButton {
+          background: none;
+          border: none;
+          cursor: pointer;
+          margin-left: 10px;
+      }
+      #toggleButton img {
+          width: 32px;
+          height: 32px;
+      }
+  </style>
 </head>
 <body>
-    <h3>Hide Elements</h3>
-    <div>
-        <input type="checkbox" id="sapTntToolPageAside">
-        <label for="sapTntToolPageAside">sapTntToolPageAside</label>
-    </div>
-    <div>
-        <input type="checkbox" id="sapTntToolPageHeaderWrapper">
-        <label for="sapTntToolPageHeaderWrapper">sapTntToolPageHeaderWrapper</label>
-    </div>
-    <br />
-    <div class="button-container">
-        <button id="removeButton">Force it to work!</button>
-        <button id="toggleButton">
-            <img id="toggleIcon" src="icons/eye_see_64.png" alt="Toggle Visibility">
-        </button>
-    </div>
-    <script src="popup.js"></script>
+  <h3>Hide Elements</h3>
+  <div>
+      <input type="checkbox" id="sapTntToolPageAside">
+      <label for="sapTntToolPageAside">sapTntToolPageAside</label>
+  </div>
+  <div>
+      <input type="checkbox" id="sapTntToolPageHeaderWrapper">
+      <label for="sapTntToolPageHeaderWrapper">sapTntToolPageHeaderWrapper</label>
+  </div>
+  <div>
+      <input type="checkbox" id="blockAuthPopups">
+      <label for="blockAuthPopups">Block Auth Popups</label>
+  </div>
+  <br />
+  <div class="button-container">
+      <button id="removeButton">Force it to work!</button>
+      <button id="toggleButton">
+          <img id="toggleIcon" src="icons/eye_see_64.png" alt="Toggle Visibility">
+      </button>
+  </div>
+  <script src="popup.js"></script>
 </body>
 </html>
